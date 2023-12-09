@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Photos List</title>
+
+  <link rel="stylesheet" type="text/css" href="main.css">
+
+    <!--remixcon-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.6.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@700&display=swap" rel="stylesheet">
+
+    <!--Scroll-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+</head>
+  <header>
+  </header>
+<body>
+  <div class="container">
+    <div class="content">
+      <h1>Library</h1>
+      <a href='index.html' class="home"><i class="ri-arrow-left-circle-line"></i></a>
+      <div class="input-fields">
+        <input type="text" id="titleInput" placeholder="Insert Title" /><br /><br />
+        <input type="text" id="urlInput" placeholder="Insert Link" /><br /><br />
+        <button onclick="addPhoto()" id="addBtn" class="btn">Add Photo</button>
+        <button onclick="updatePhoto()" id="updateBtn" class="btn" style="display: none;">Update Photo</button>
+        <button onclick="cancelEdit()" id="cancelBtn" class="btn" style="display: none;">Cancel</button>
+      </div>
+      <ul id="photos-list" class="photos-list"></ul>
+    </div>
+  </div>
+  <script src="main.js">
+  </script>
+</body>
+</html>

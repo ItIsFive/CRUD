@@ -1,0 +1,167 @@
+/* Reset default margin and padding */
+html, body, ul {
+    margin: 0;
+    padding: 0;
+  }
+
+html {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(245.59deg, #adc0c5 0%, #92a6c4 28.53%, #8cbfcc 75.52%);
+  height: 100%; /* Ensure the html element takes up the full viewport height */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+  /* Set a background color and styles for the container */
+body {
+    margin: 0; /* Remove default body margin */
+}
+  
+.home {
+    position: absolute;
+    top: 20px; /* Adjust as needed */
+    left: 50px; /* Adjust as needed */
+    z-index: 9999; /* Ensure it's above other elements */
+    border-radius: 25px;
+    font-size: 50px;
+    color: rgb(245, 245, 245);
+    text-decoration: none;
+}
+
+.home i:hover{
+    font-size: 55px;
+    transition: all .55s ease;
+    color : #e997e9;
+}
+
+.container {
+    display: flex;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 50px;
+    background: linear-gradient(245.59deg, #53b0c7 0%, rgb(118, 150, 199) 28.53%, #2fa9c7 75.52%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    margin-bottom: 20px;
+    min-height: 750px;
+    justify-content: center;
+}
+  
+h1 {
+    font-family: 'Permanent Marker', cursive;
+    color : white; 
+    font-size: 80px;
+    margin-bottom: 20px;
+    margin-top: 0;
+    display: grid;
+    text-align: center;
+}
+  
+.input-fields input[type="text"] {
+    width: 870px;
+    padding: 10px;
+    border-radius: 20px;
+    max-width: 100%;
+    background-color : #e9e1e9;
+    border : white 1px solid;
+    justify-content: center;
+    display: inline-block;
+}
+  
+.input-fields .btn {
+    font-family: 'Silkscreen', sans-serif;
+    display: inline-block;
+    color: white;
+    background: #C5ADC5;
+    border: 1px solid white ;
+    padding: 18px 20px;
+    line-height: 1;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: all .55s ease;
+    margin-bottom: 10px;
+    margin-right: 4px;
+}
+
+.input-fields .btn:hover{
+    background : #c25ac2;
+    transform: translatex(5px) translateY(-5px);
+  }
+  
+  /* Style the photos list */
+.photos-list {
+    list-style: none;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+    color : white;
+    font-family: 'Silkscreen', sans-serif;
+    font-size: larger;
+    text-align: center;
+    transition: all .55s ease;
+}
+  
+.photos-list li {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #dddddd8c;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-height: 100%;
+    height: 95%;
+}
+
+.photos-list .btn {
+    font-family: 'Silkscreen', sans-serif;
+    color: white;
+    background: #C5ADC5;
+    border: 1px solid white;
+    padding: 10px;
+    line-height: 1;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 20px;
+    text-transform: uppercase;
+    transition: all .55s ease;
+    margin-top: 1px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 20%; /* Adjust button width as needed */
+    position: grid;
+}
+
+.photos-list .btn:hover {
+    background-color: #53b0c7;
+    transform: translatex(5px) ;
+}
+  
+.photos-list li:hover {
+    background-color: #c7bec9;
+    transform: translatex(3px) translateY(-3px);
+    transition: all .55s ease;
+
+}
+  
+.imgstyle {
+  max-width: 95%;
+  max-height: 95%;
+  width: auto;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+  border-radius: 10px;
+
+}
