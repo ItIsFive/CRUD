@@ -23,7 +23,12 @@ header{
   font-size: 20px;
   font-weight: 700;
   color: white;
-  padding : 20px
+  padding : 20px;
+  transition: all .55s ease;
+}
+
+.logo:hover{
+  font-size: 50px;
 }
 
 .go{
@@ -103,11 +108,35 @@ header{
   color:#b4dadf;
 }
 
+.gotxt .git{
+  font-size: 40px;
+  border: none;
+  padding: 0;
+  background: none;
+  margin: 0;
+  display: flex;
+  position: absolute;
+  top: 70px; /* Adjust as needed */
+  left: 100px; /* Adjust as needed */
+  z-index: 9999; /* Ensure it's above other elements */
+}
+
+.gotxt .git:hover{
+  background: none;
+  font-size: 50px;
+  color:#b4dadf;
+}
+
 .goimg img{
   width: 700px;
   height: auto;
   display: flex;
   border: 2px transparent;
   border-radius: 20px;
+  transition: all .55s ease;
 }
 
+.goimg img:hover{
+  width: 750px;
+  height: auto;
+}
