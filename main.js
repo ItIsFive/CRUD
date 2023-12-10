@@ -97,7 +97,6 @@ function clearInputFields() {
   document.getElementById('urlInput').value = '';
 }
 
-// Initial rendering
 renderPhotos();
 
 document.addEventListener("DOMContentLoaded", function() {
