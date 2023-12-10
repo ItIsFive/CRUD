@@ -1,8 +1,14 @@
-let photos = [];
 let editMode = false;
 let editId = null;
+let photos = [
+  {
+    id: 1,
+    title: 'Placeholder Image 1',
+    url: 'https://via.placeholder.com/600/92c952',
+  },
+];
 
-function renderPhotos() {
+function renderPhotos(photos) {
   const photosList = document.getElementById('photos-list');
   photosList.innerHTML = '';
 
@@ -34,6 +40,22 @@ function renderPhotos() {
   });
 }
 
+async function fetchPhotosFromAPI() {
+  try {
+    const response = await fetch('https://jsonplaceholder.typicode.com/photos?_limit=1');
+    if (!response.ok) {
+      throw new Error('Network response was not ok.');
+    }
+    const data = await response.json();
+    photos = data.map((item) => ({ id: item.id, title: item.title, url: item.url }));
+    renderPhotos(photos);
+  } catch (error) {
+    console.error('Error fetching photos:', error);
+  }
+}
+
+fetchPhotosFromAPI()
+
 function addPhoto() {
   const titleInput = document.getElementById('titleInput').value.trim();
   const urlInput = document.getElementById('urlInput').value.trim();
@@ -43,7 +65,7 @@ function addPhoto() {
     const newPhoto = { id: newId, title: titleInput, url: urlInput };
 
     photos.push(newPhoto);
-    renderPhotos();
+    renderPhotos(photos); 
     clearInputFields();
   } else {
     console.error('Title or URL cannot be empty.');
@@ -53,7 +75,7 @@ function addPhoto() {
 function deletePhoto(index) {
   if (index >= 0 && index < photos.length) {
     photos.splice(index, 1);
-    renderPhotos();
+    renderPhotos(photos); 
   }
 }
 
@@ -97,8 +119,6 @@ function clearInputFields() {
   document.getElementById('urlInput').value = '';
 }
 
-renderPhotos();
-
 document.addEventListener("DOMContentLoaded", function() {
   const sr = ScrollReveal({
     distance: '65px',
@@ -112,3 +132,7 @@ document.addEventListener("DOMContentLoaded", function() {
     origin: 'top'
   });
 });
+
+renderPhotos();
+
+

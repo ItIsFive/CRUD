@@ -1,9 +1,3 @@
-let menu  = document.querySelector('#menu-icon');
-
-menu.onclick = () => {
-  menu.classList.toggle('bx-x');
-}
-
 const sr = ScrollReveal ({
   distance:'65px',
   duration: 2600,
